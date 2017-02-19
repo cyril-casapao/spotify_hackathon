@@ -19,7 +19,14 @@ body {
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="cursor.js"></script>
-
+<audio id="audioElement" src="../audio/song.mp3"></audio>
+<div>
+  <button onclick="document.getElementById('audioElement').play()">Play the Audio</button>
+  <button onclick="document.getElementById('audioElement').pause()">Pause the Audio</button>
+  <button onclick="document.getElementById('audioElement').volume+=0.1">Increase Volume</button>
+  <button onclick="document.getElementById('audioElement').volume-=0.1">Decrease Volume</button>
+  <!-- <canvas id="visualizer" width=1000 height=1000> -->
+</div>
 <script>
 var matrix = [];
 $.getJSON( "matrix.json", function( data ) {
